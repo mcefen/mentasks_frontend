@@ -6,7 +6,6 @@ import ModalFormularioTarea from '../components/ModalFormularioTarea'
 import ModalEliminarTarea from '../components/ModalEliminarTarea'
 import ModalEliminarColaborador from '../components/ModalEliminarColaborador'
 import Tarea from '../components/Tarea'
-import Alerta from '../components/Alerta'
 import Colaborador from '../components/Colaborador'
 import io from 'socket.io-client'
 
@@ -21,7 +20,7 @@ const Proyecto = () => {
   
   useEffect( () => {
     obtenerProyecto(params.id)
-  }, [])
+  },[])
 
   useEffect(() => {
     socket = io(import.meta.env.VITE_BACKEND_URL)
@@ -61,7 +60,6 @@ const Proyecto = () => {
   
   if( cargando) return 'cargando...' 
 
-  const { msg } = alerta
 
   
   
@@ -109,13 +107,6 @@ const Proyecto = () => {
 
       
       <p className='font-bold text-xl mt-10'>Tareas del Proyecto</p>
-
-      {/* <div className='flex justify-center'>
-        <div className='w-full md:w-1/3 lg:w-1/4'>
-          {msg && <Alerta alerta={alerta}/>}
-        </div>
-      </div> */}
-
       
 
       <div className='bg-white shadow mt-10 rounded-lg'>
