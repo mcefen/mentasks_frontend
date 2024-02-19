@@ -13,18 +13,20 @@ let socket
 
 const Proyecto = () => {
   const params = useParams()
-  const { obtenerProyecto, proyecto, cargando, handleModalTarea, alerta, submitTareasProyecto,  eliminarTareaProyecto, actualizarTareaProyecto, cambiarEstadoTarea} = useProyectos()
+  const { obtenerProyecto, proyecto, cargando, handleModalTarea, submitTareasProyecto,  eliminarTareaProyecto, actualizarTareaProyecto, cambiarEstadoTarea} = useProyectos()
   const admin = useAdmin()
   console.log(admin)
   
   
   useEffect( () => {
     obtenerProyecto(params.id)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   useEffect(() => {
     socket = io(import.meta.env.VITE_BACKEND_URL)
     socket.emit('abrir proyecto', params.id)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {

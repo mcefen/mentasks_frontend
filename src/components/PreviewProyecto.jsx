@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth'
 const PreviewProyecto = ({proyecto}) => {
 
     const {auth} = useAuth()
-    const {nombre, _id, cliente, creador} = proyecto
+     const {nombre, _id, cliente, creador} = proyecto
 
 
   return (

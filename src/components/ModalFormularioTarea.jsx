@@ -4,7 +4,7 @@ import useProyectos from "../hooks/useProyectos";
 import Alerta from "./Alerta";
 import { useParams } from "react-router-dom";
 
-const PRIORIDAD = ["Baja", "Media", "Alta"];
+const PRIORIDAD = ["Baja", "Media", "Alta"]
 
 const ModalFormularioTarea = () => {
   const [id, setId] = useState("");
@@ -45,7 +45,7 @@ const ModalFormularioTarea = () => {
     if ([nombre, descripcion, fechaEntrega, prioridad].includes("")) {
       mostrarAlerta({
         msg: "Todos los campos son obligatorios",
-        error: true,
+        error: true
       });
       return;
     }
@@ -56,7 +56,7 @@ const ModalFormularioTarea = () => {
       descripcion,
       fechaEntrega,
       prioridad,
-      proyecto: params.id,
+      proyecto: params.id
     });
     setId("");
     setNombre("");
@@ -202,7 +202,7 @@ const ModalFormularioTarea = () => {
                         onChange={(e) => setPrioridad(e.target.value)}
                       >
                         <option value="">--- Seleccionar ---</option>
-                        {PRIORIDAD.map((opcion) => (
+                        {PRIORIDAD.map(opcion => (
                           <option key={opcion}>{opcion}</option>
                         ))}
                       </select>
