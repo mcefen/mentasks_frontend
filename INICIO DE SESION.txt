@@ -1,0 +1,10 @@
+INICIO DE SESION DEL PROYECTO
+
+FRONTEND npm run dev
+BACKEND  npm start
+
+RECURSOS:
+
+MONGO DB
+
+MAILTRAMP correo electronico 
