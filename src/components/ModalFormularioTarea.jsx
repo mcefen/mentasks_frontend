@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from "react";
-import { Dialog, Transition } from '../../../@headlessui/react/dist'
+import { Dialog, Transition } from '@headlessui/react'
 import useProyectos from "../hooks/useProyectos";
 import Alerta from "./Alerta";
 import { useParams } from "react-router-dom";
