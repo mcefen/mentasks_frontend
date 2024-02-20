@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { Dialog, Transition } from '../../../@headlessui/react/dist'
 import useProyectos from '../hooks/useProyectos'
 
 const ModalEliminarColaborador = () => {
